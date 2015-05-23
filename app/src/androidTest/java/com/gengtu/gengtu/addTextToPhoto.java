@@ -6,5 +6,4 @@ package com.gengtu.gengtu;
 public class addTextToPhoto {
     //Who wants to add this feature???????????????
     //blah blah blah
-    //rdfrdrdrdr
 }
