@@ -4,5 +4,6 @@ package com.gengtu.gengtu;
  * Created by Joseph on 2015/5/23.
  */
 public class addTextToPhoto {
-    //誰要開發這個功能???
+    //Who wants to add this feature???????????????
+    //blah blah blah
 }
