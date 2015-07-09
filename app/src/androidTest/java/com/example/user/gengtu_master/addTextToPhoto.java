@@ -1,7 +1,7 @@
-package com.gengtu.gengtu;
+package com.example.user.gengtu_master;
 
 /**
- * Created by Joseph on 2015/5/23.
+ * Created by User on 2015/7/9.
  */
 public class addTextToPhoto {
     //Who wants to add this feature???????????????
