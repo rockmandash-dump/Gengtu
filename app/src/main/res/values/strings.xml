@@ -1,6 +1,18 @@
 <resources>
-    <string name="app_name">Gengtu-master</string>
-
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Gengtu</string>
     <string name="Gengtu">讓你一秒變梗王</string>
+    <string name="hot">熱門</string>
+    <string name="newly">最新</string>
+    <string name="classify">分類</string>
+    <string name="take">拍梗</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_overflow">Overflow</string>
+    <string name="action_searchs">Searchs</string>
+    <string name="title_activity_main">一秒變梗王</string>
+    <string name="title_activity_HotFragment">Hot</string>
+    <string name="title_activity_NewlyFragment">Newly</string>
+    <string name="title_activity_ClassifyFragment">Classify</string>
+    <string name="title_activity_TakeFragment">Take</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="string_setting">更改設定!</string>
 </resources>

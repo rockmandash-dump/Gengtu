@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main">
+
+
+    <item android:id="@+id/action_overflow"
+        android:title="@string/action_overflow"
+        android:icon="@drawable/ic_action_overflow"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom" >
+        <menu>
+            <item
+                android:id="@+id/action_settings"
+                android:title="Setting"/>
+        </menu>
+    </item>
+
+
+    <item android:id="@+id/action_searchs"
+        android:title="@string/action_searchs"
+        android:icon="@drawable/search_icon"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+
+</menu>
+

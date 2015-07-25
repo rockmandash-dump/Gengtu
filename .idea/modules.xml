@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Gengtu-master.iml" filepath="$PROJECT_DIR$/Gengtu-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gengtu.iml" filepath="$PROJECT_DIR$/Gengtu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

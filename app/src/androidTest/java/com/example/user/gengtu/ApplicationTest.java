@@ -1,4 +1,4 @@
-package com.example.user.gengtu_master;
+package com.example.user.gengtu;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

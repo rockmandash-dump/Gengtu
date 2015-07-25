@@ -1,4 +1,4 @@
-package com.example.user.gengtu_master;
+package com.example.user.gengtu;
 
 /**
  * Created by User on 2015/7/9.
