@@ -26,13 +26,15 @@ public class HotFragment extends ListFragment {
 
     private ProgressDialog pDialog;
     // URL to get contacts JSON
-    private static String url = "https://gentu-server.herokuapp.com/api/queryData";
+    private static String url = "https://gentu-server.herokuapp.com/api/queryPost";
 
     // JSON Node names
+    private static final String TAG_id = "_id";
     private static final String TAG_USER_ID = "userID";
+    private static final String TAG_USER_NAME = "userName";
     private static final String TAG_TITLE = "title";
     private static final String TAG_DESCRIPTION = "description";
-    private static final String TAG_CATEGORIES = "categories";
+    private static final String TAG_CATEGORIE = "categorie";
     private static final String TAG_TIME = "time";
 
     // post JSONArray

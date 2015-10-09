@@ -4,12 +4,73 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/take"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:text="標題"
+        android:id="@+id/textView2"
+        android:textSize="25sp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTitle"
+        android:hint="輸入你的標題........................"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="內容"
+        android:id="@+id/textView3"
+        android:textSize="25sp"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/edtTitle"
+        android:layout_alignLeft="@+id/edtTitle"
+        android:layout_alignStart="@+id/edtTitle" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/edtDescription"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:hint="輸入你的內容........................" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="選取相片"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/edtDescription"
+        android:layout_alignStart="@+id/edtDescription"
+        android:layout_marginBottom="31dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="發佈"
+        android:id="@+id/submit_post"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/edtTitle"
+        android:layout_toEndOf="@+id/edtTitle" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/edtDescription"
+        android:layout_alignStart="@+id/edtDescription" />
 </RelativeLayout>
