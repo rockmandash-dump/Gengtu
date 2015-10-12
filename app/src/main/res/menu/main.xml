@@ -17,9 +17,9 @@
     </item>
 
 
-    <item android:id="@+id/action_searchs"
-        android:title="@string/action_searchs"
-        android:icon="@drawable/search_icon"
+    <item android:id="@+id/action_user"
+        android:title="@string/action_user"
+        android:icon="@drawable/ic_action_user"
         android:orderInCategory="1"
         app:showAsAction="ifRoom" />
 

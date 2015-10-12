@@ -79,12 +79,19 @@ public class Main extends ActionBarActivity {
                 Setting();
                 return true;
             }
-
+            if (id == R.id.action_user) {
+                User();
+                return true;
+            }
             return super.onOptionsItemSelected(item);
         }
 
         private void Setting() {
         Intent intent = new Intent(this,Setting.class);
+        startActivity(intent);
+        }
+        private void User() {
+        Intent intent = new Intent(this,User.class);
         startActivity(intent);
         }
 

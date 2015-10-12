@@ -17,10 +17,10 @@
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:id="@+id/edtTitle"
-        android:hint="輸入你的標題........................"
+        android:hint="輸入你的標題"
         android:layout_below="@+id/textView2"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2" />
@@ -37,7 +37,7 @@
         android:layout_alignStart="@+id/edtTitle" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
@@ -45,7 +45,10 @@
         android:layout_below="@+id/textView3"
         android:layout_alignLeft="@+id/textView3"
         android:layout_alignStart="@+id/textView3"
-        android:hint="輸入你的內容........................" />
+        android:hint="輸入你的內容"
+        android:layout_above="@+id/spClassify" />
+
+
 
     <Button
         android:layout_width="wrap_content"
@@ -62,15 +65,21 @@
         android:layout_height="wrap_content"
         android:text="發佈"
         android:id="@+id/submit_post"
-        android:layout_alignTop="@+id/button"
-        android:layout_toRightOf="@+id/edtTitle"
-        android:layout_toEndOf="@+id/edtTitle" />
+        android:layout_below="@+id/spClassify"
+        android:layout_alignRight="@+id/edtDescription"
+        android:layout_alignEnd="@+id/edtDescription" />
+
+
 
     <Spinner
+        android:id="@+id/spClassify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_centerVertical="true"
+        android:entries="@array/classify_array"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/button"
         android:layout_alignLeft="@+id/edtDescription"
-        android:layout_alignStart="@+id/edtDescription" />
+        android:layout_alignStart="@+id/edtDescription"
+        android:layout_toLeftOf="@+id/submit_post"
+        android:layout_toStartOf="@+id/submit_post" />
 </RelativeLayout>

@@ -7,12 +7,23 @@
     <string name="take">拍梗</string>
     <string name="action_settings">Settings</string>
     <string name="action_overflow">Overflow</string>
-    <string name="action_searchs">Searchs</string>
+    <string name="action_user">User</string>
     <string name="title_activity_main">一秒變梗王</string>
     <string name="title_activity_HotFragment">Hot</string>
     <string name="title_activity_NewlyFragment">Newly</string>
     <string name="title_activity_ClassifyFragment">Classify</string>
     <string name="title_activity_TakeFragment">Take</string>
-    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_setting">設定</string>
+    <string name="title_activity_user">會員</string>
     <string name="string_setting">更改設定!</string>
+    <string name="string_user">會員!</string>
+    <string-array name="classify_array">
+        <item>新鮮</item>
+        <item>諷刺</item>
+        <item>WTF</item>
+        <item>角色扮演</item>
+        <item>食物</item>
+        <item>GIF</item>
+    </string-array>
+
 </resources>

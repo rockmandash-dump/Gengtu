@@ -7,8 +7,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -22,40 +25,64 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TakeFragment extends Fragment {
+public class TakeFragment extends Fragment{
     private EditText mEdtTitle, mEdtDescription;
     private Button mBtnSubmit;
-
+    private Spinner spClassify;
 
     public void onViewCreated (View view, Bundle savedInstanceState) {
         mEdtTitle = (EditText) view.findViewById(R.id.edtTitle);
         mEdtDescription = (EditText) view.findViewById(R.id.edtDescription);
         mBtnSubmit = (Button) view.findViewById(R.id.submit_post);
-
         mBtnSubmit.setOnClickListener(btnSubmitOnClick);
+        findViews();
     }
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         Log.d("=====>", "TakeFragment onAttach");
-
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d("=====>", "TakeFragment onCreateView");
         return inflater.inflate(R.layout.frg_take, container, false);
+
+
+    }
+    private void findViews(){
+        spClassify = (Spinner)getView().findViewById(R.id.spClassify);
+        spClassify.setOnItemSelectedListener(listener.get());
     }
 
+    final ThreadLocal<Spinner.OnItemSelectedListener> listener =
+            new ThreadLocal<Spinner.OnItemSelectedListener>() {
+                @Override
+                protected Spinner.OnItemSelectedListener initialValue() {
+                    return new Spinner.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView parent,
+                                                   View view, int pos, long id) {
+                            Toast.makeText(parent.getContext(),
+                                    parent.getItemAtPosition(pos).toString(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+                            Toast.makeText(parent.getContext(),
+                                    "Nothing Selected!",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+
+                    };
+                }
+            };
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.d("=====>", "TakeFragment onActivityCreated");
     }
-
     private View.OnClickListener btnSubmitOnClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -93,7 +120,4 @@ public class TakeFragment extends Fragment {
             }
         }
     };
-
-
-
 }
