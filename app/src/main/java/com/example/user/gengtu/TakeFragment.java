@@ -1,6 +1,8 @@
 package com.example.user.gengtu;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -10,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -25,6 +28,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.transform.Result;
+
 public class TakeFragment extends Fragment{
     private EditText mEdtTitle, mEdtDescription;
     private Button mBtnSubmit;
@@ -36,6 +41,7 @@ public class TakeFragment extends Fragment{
         mBtnSubmit = (Button) view.findViewById(R.id.submit_post);
         mBtnSubmit.setOnClickListener(btnSubmitOnClick);
         findViews();
+        findImage();
     }
     @Override
     public void onAttach(Activity activity) {
@@ -53,6 +59,42 @@ public class TakeFragment extends Fragment{
     private void findViews(){
         spClassify = (Spinner)getView().findViewById(R.id.spClassify);
         spClassify.setOnItemSelectedListener(listener.get());
+    }
+
+    private void findImage(){
+        Button b =(Button)getView().findViewById(R.id.imagebutton);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                Intent destIntent = Intent.createChooser(intent, "選擇檔案");
+                startActivityForResult(destIntent, 0);
+            }
+        });
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // 有選擇檔案
+        if ( resultCode == Activity.RESULT_OK )
+        {
+            // 取得檔案的 Uri
+            Uri uri = data.getData();
+            if( uri != null )
+            {
+                // 利用 Uri 顯示 ImageView 圖片
+                ImageView iv = (ImageView)getView().findViewById(R.id.imagebutton);
+                iv.setImageURI( uri );
+
+            }
+        }
+
     }
 
     final ThreadLocal<Spinner.OnItemSelectedListener> listener =
@@ -121,3 +163,4 @@ public class TakeFragment extends Fragment{
         }
     };
 }
+

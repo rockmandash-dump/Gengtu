@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="選取相片"
-        android:id="@+id/button"
+        android:id="@+id/imagebutton"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/edtDescription"
         android:layout_alignStart="@+id/edtDescription"
@@ -76,10 +76,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/classify_array"
-        android:layout_marginBottom="41dp"
-        android:layout_above="@+id/button"
-        android:layout_alignLeft="@+id/edtDescription"
-        android:layout_alignStart="@+id/edtDescription"
-        android:layout_toLeftOf="@+id/submit_post"
-        android:layout_toStartOf="@+id/submit_post" />
+        android:layout_marginBottom="70dp"
+        android:layout_above="@+id/imagebutton"
+        android:layout_alignLeft="@+id/imagebutton"
+        android:layout_alignStart="@+id/imagebutton" />
 </RelativeLayout>
